@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { AgregarComponent } from './agregar/agregar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
+import { SecondComponent } from './second/second.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { LoginComponent } from './login/login.component';
     PrincipalComponent,
     HeaderComponent,
     AgregarComponent,
-    LoginComponent
+    LoginComponent,
+    SecondComponent
     ],
   imports: [
     BrowserModule,
