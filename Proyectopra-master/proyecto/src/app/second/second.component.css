@@ -1,9 +1,23 @@
-#vemos{
-    border: 2px solid red
+#onef{
+    border: 2px solid red;
+    margin: auto;    
 }
-#vaina{
-    border: 2px solid green
+#oneff{
+    border: 2px solid green;
+    margin: 20px 0px 20px 20px;    
 }
-#kilos{
-    text-align: center
+#labelo{
+    border: 2px solid green;
+    margin: 20px 5px 20px 0px;    
+    padding-top: 5px;
+    padding-left: 0px;
+    
+}
+#one{
+    border: 2px solid black;
+}
+#two{
+    border: 2px solid blue;
+    margin: auto;
+    padding: 30px;
 }
