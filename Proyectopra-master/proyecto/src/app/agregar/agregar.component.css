@@ -1,0 +1,9 @@
+body{
+    background: #f6fbfd;
+}
+#bot{
+    border: solid 1px red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
