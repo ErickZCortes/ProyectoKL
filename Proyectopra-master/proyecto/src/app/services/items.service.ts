@@ -1,35 +1,34 @@
 import { Subject } from "rxjs";
+import {AngularFireDatabase, AngularFireList} from 'angularfire2/database';
 import { Item } from "../shared/item.model";
+import { Injectable } from "@angular/core";
+
+@Injectable()
 
 export class ItemsService{
     itemsChanged = new Subject<Item[]>();
+    itemList : AngularFireList<any>;
+    selectedItem: Item = new Item();
 
-    private items: Item[] = [
-        new Item(0)
-    ]
-
-    constructor(private itemService: ItemsService){}
+    constructor(private firebase: AngularFireDatabase){}
     
     getItems(){
-        return this.items.slice();
-    }
-
-    getItem(index : number){
-        return this.items[index];
+        this.itemList = this.firebase.list('items');
     }
 
     addItemsToList(item : Item){
-        this.items.push(item);
-        this.itemsChanged.next(this.items.slice());
+        this.itemList.push({
+            quantity: item.quantity
+        });
     }
 
-    updateItem(index: number, item : Item){
-        this.items[index] = item;
-        this.itemsChanged.next(this.items.slice());
+    updateItem(item : Item){
+        this.itemList.update(item.iditem,{
+            quantity: item.quantity
+        })
     }
 
-    onDelete(index: number){
-        this.items.splice(index,1);
-        this.itemsChanged.next(this.items.slice());
+    deleteItem(iditem : string){
+        this.itemList.remove(iditem);
     }
 }

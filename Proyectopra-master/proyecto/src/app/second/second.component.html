@@ -1,18 +1,23 @@
 <div class="row">
   <div class="col-12">
-    <form>
+    <form #itemForm = "ngForm" (ngSubmit)="(itemForm)">
       <div id="onef" class="row">
-        <div id="oneff" class="col-md-4">
-          <input type="text" class="form-control" id="name" formControlName="name">
+        <div id="oneff" class="col-md-4 form-group">
+            <label for="item">KILOS</label>
+          <input 
+          type="text" 
+          class="form-control"  
+          name = "item" 
+          #name = "ngModel"
+          [(ngModel)]="itemService.selectedItem.quantity"
+          placeholder="agrega una cantidad válida..." 
+          >
         </div>
-        <div id="labelo" class="col-md-1">
-          <label for="name">KILOS</label>
-        </div>
-        <div id="labelo" class="col-md-1">
-            <label for="name">←Agregar</label>
+        <div id="labelo" class="col-md-1 form-group">
+            <button class="btn btn-primary" type="submit"> Agregar</button>
           </div>
-          <div id="labelo" class="col-md-4">
-              <label for="name">Irá la fecha</label>
+          <div id="labelo" class="col-md-1">
+              <button class="btn btn-secondary" type="reset" (click) ="resetForm(itemForm)"> Reset</button>
             </div>
       </div>
       <div id="two" class="row">

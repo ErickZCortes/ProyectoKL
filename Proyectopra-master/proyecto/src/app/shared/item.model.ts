@@ -1,4 +1,4 @@
 export class Item {
-    constructor(public quantity: number){
-    }
+     iditem : string;
+      quantity: number;
 }
