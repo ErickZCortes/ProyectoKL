@@ -1,5 +1,5 @@
-import { Item } from "./item.model";
+import { Item } from './item.model';
 
-export class Registro{
-    constructor(public salesperson: string, public product: string, public items : Item[]){}
+export class Registro {
+    constructor(public salesperson: string, public product: string, public items: Item[]) {}
 }
