@@ -10,6 +10,8 @@ import { AgregarComponent } from './agregar/agregar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { SecondComponent } from './second/second.component';
+import { RegisterComponent } from './register/register.component';
+
 
 //firebase
 import {AngularFireModule} from 'angularfire2';
@@ -28,7 +30,8 @@ import { ItemsService } from './services/items.service';
     HeaderComponent,
     AgregarComponent,
     LoginComponent,
-    SecondComponent
+    SecondComponent,
+    RegisterComponent
     ],
   imports: [
     BrowserModule,

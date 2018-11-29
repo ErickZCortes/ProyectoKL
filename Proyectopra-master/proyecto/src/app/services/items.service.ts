@@ -5,7 +5,7 @@ import { Injectable } from "@angular/core";
 
 @Injectable()
 
-export class ItemsService{
+export class ItemsService {
     itemsChanged = new Subject<Item[]>();
     itemList : AngularFireList<any>;
     selectedItem: Item = new Item();
@@ -30,5 +30,6 @@ export class ItemsService{
 
     deleteItem(iditem : string){
         this.itemList.remove(iditem);
+
     }
 }
