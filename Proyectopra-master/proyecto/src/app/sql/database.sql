@@ -1,5 +1,0 @@
-CREATE DATABASE proyecto;
-
-USE proyecto;
-
-CREATE TABLE
