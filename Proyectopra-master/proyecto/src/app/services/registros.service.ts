@@ -1,12 +1,12 @@
-import { Subject } from "rxjs";
-import { Registro } from "../shared/registro.model";
-import {AngularFireDatabase, AngularFireList} from '@angular/fire/database';
+import { Subject } from 'rxjs';
+import { Registro } from '../shared/registro.model';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 
 export class RegistrosSevice {
     registroChanged = new Subject<Registro[]>();
-    registroList : AngularFireList<any>;
-    constructor(private firebase: AngularFireDatabase){};
-//
+    registroList: AngularFireList<any>;
+    constructor(private firebase: AngularFireDatabase) { }
+    //
     /*private registros: Registro[]=[
         new Registro('', '', [new Item('', '', 0)])
     ]
@@ -41,4 +41,4 @@ export class RegistrosSevice {
         this.registroChanged.next(this.registros.slice());
     }*/
 
-    }
+}

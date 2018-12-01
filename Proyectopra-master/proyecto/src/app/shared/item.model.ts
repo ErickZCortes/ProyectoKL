@@ -1,5 +1,5 @@
 export class Item {
 
-     iditem : string;
+      iditem: string;
       quantity: number;
 }

@@ -17,12 +17,12 @@ export class SecondComponent implements OnInit {
     this.resetForm();
   }
 
-  onSubmit(itemForm : NgForm){
+  onSubmit(itemForm: NgForm) {
     this.itemService.addItemsToList(itemForm.value);
     this.resetForm(itemForm);
   }
-  resetForm(itemForm?: NgForm){
-    if(itemForm !=null){
+  resetForm(itemForm?: NgForm) {
+    if (itemForm != null) {
       itemForm.reset();
       this.itemService.selectedItem = new Item();
     }

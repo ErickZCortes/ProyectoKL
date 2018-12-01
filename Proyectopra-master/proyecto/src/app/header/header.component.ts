@@ -10,22 +10,24 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private authService : AuthService, private afsAuth: AngularFireAuth) {}
+  constructor(private authService: AuthService, private afsAuth: AngularFireAuth) { }
 
+  // tslint:disable-next-line:no-inferrable-types
   public app_name: string = '';
+  // tslint:disable-next-line:no-inferrable-types
   public isLogged: boolean = false;
 
   ngOnInit() {
     this.getCurrentUser();
-  } 
+  }
 
-  getCurrentUser(){
-    this.authService.isAuth().subscribe( auth => {
-      if(auth){
+  getCurrentUser() {
+    this.authService.isAuth().subscribe(auth => {
+      if (auth) {
         this.isLogged = true;
-      }else{
+      } else {
         this.isLogged = false;
       }
-    })
+    });
   }
 }
