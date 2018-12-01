@@ -1,5 +1,5 @@
 import { Subject } from "rxjs";
-import {AngularFireDatabase, AngularFireList} from 'angularfire2/database';
+import {AngularFireDatabase, AngularFireList} from '@angular/fire/database';
 import { Item } from "../shared/item.model";
 import { Injectable } from "@angular/core";
 

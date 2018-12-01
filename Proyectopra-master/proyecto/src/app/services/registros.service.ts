@@ -1,6 +1,6 @@
 import { Subject } from "rxjs";
 import { Registro } from "../shared/registro.model";
-import {AngularFireDatabase, AngularFireList} from 'angularfire2/database';
+import {AngularFireDatabase, AngularFireList} from '@angular/fire/database';
 
 export class RegistrosSevice {
     registroChanged = new Subject<Registro[]>();

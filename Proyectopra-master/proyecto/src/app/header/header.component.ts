@@ -1,4 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { AngularFireAuth } from '@angular/fire/auth';
+
 
 @Component({
   selector: 'app-header',
@@ -7,15 +10,22 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-//  @Output() featureSelected = new EventEmitter<string>();
+  constructor(private authService : AuthService, private afsAuth: AngularFireAuth) {}
 
-  constructor() { }
+  public app_name: string = '';
+  public isLogged: boolean = false;
 
-  /*onSelect(feature: string){
-    this.featureSelected.emit(feature);
-  }
-*/
   ngOnInit() {
-  }
+    this.getCurrentUser();
+  } 
 
+  getCurrentUser(){
+    this.authService.isAuth().subscribe( auth => {
+      if(auth){
+        this.isLogged = true;
+      }else{
+        this.isLogged = false;
+      }
+    })
+  }
 }

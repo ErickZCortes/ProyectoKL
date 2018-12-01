@@ -12,16 +12,15 @@ import { LoginComponent } from './login/login.component';
 import { SecondComponent } from './second/second.component';
 import { RegisterComponent } from './register/register.component';
 
-
 //firebase
-import {AngularFireModule} from 'angularfire2';
-import {AngularFireDatabaseModule} from 'angularfire2/database';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+import {AngularFireAuth} from '@angular/fire/auth';
 //service
 import { ItemsService } from './services/items.service';
-
+import {AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -35,14 +34,16 @@ import { ItemsService } from './services/items.service';
     ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
-    AngularFireDatabaseModule,
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    FormsModule
+    AngularFireDatabaseModule
   ],
   providers: [
-    ItemsService
+    ItemsService,
+    AuthService,
+    AngularFireAuth
   ],
   bootstrap: [AppComponent]
 })
