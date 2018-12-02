@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { SecondComponent } from './second/second.component';
 import { RegisterComponent } from './register/register.component';
+import { ContactoComponent } from './principal/contacto/contacto.component';
 
 // firebase
 import { AngularFireModule } from '@angular/fire';
@@ -22,6 +23,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { ItemsService } from './services/items.service';
 import { AuthService } from './services/auth.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { AuthService } from './services/auth.service';
     AgregarComponent,
     LoginComponent,
     SecondComponent,
-    RegisterComponent
+    RegisterComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

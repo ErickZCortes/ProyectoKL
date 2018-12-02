@@ -1,10 +1,11 @@
-import {Routes, RouterModule} from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { PrincipalComponent } from './principal/principal.component';
 import { AgregarComponent } from './agregar/agregar.component';
 import { LoginComponent } from './login/login.component';
 import { SecondComponent } from './second/second.component';
 import { RegisterComponent } from './register/register.component';
+import { ContactoComponent } from './principal/contacto/contacto.component';
 const routes: Routes = [
     {
         path: '', redirectTo: '/principal', pathMatch: 'full'
@@ -23,7 +24,11 @@ const routes: Routes = [
     },
     {
         path: 'register', component: RegisterComponent
+    },
+    {
+        path: 'contacto', component: ContactoComponent
     }
+
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
