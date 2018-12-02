@@ -5,15 +5,16 @@
                 <div class="card card-signin my-5">
                     <div class="card-body">
                         <h5 class="card-title text-center">Inicia Sesión</h5>
-                        <form class="form-signin" #formLogin="ngForm" (submit) = "onLogin()">
+                        <form class="form-signin" #formLogin="ngForm" (submit)="onLogin()">
                             <div class="form-label-group">
                                 <label for="inputEmail">Correo Electronico</label>
-                                <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email" required [(ngModel)] = "email">
+                                <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email"
+                                    required [(ngModel)]="email">
                             </div>
                             <div class="form-label-group">
                                 <label for="inputPassword">Contraseña</label>
-                                <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Contraseña"
-                                    required [(ngModel)]="password">
+                                <input type="password" id="inputPassword" class="form-control" name="password"
+                                    placeholder="Contraseña" required [(ngModel)]="password">
                             </div>
                             <div class="custom-control custom-checkbox mb-3">
                                 <input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -29,11 +30,11 @@
                                 <hr>
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-block btn-social btn-facebook" (click) = "onLoginFacebook()">
+                                <button class="btn btn-block btn-social btn-facebook" (click)="onLoginFacebook()">
                                     <span class="fa fa-facebook"></span>
                                     FACEBOOK
                                 </button>
-                                <button class="btn btn-block btn-social btn-google" (click) = "onLoginGoogle()">
+                                <button class="btn btn-block btn-social btn-google" (click)="onLoginGoogle()">
                                     <span class="fa fa-google"></span>
                                     GOOGLE
                                 </button>
