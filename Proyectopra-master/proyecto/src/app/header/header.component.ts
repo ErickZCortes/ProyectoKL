@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private authService: AuthService, private afsAuth: AngularFireAuth) { }
+  constructor(private authService: AuthService, private afsAuth: AngularFireAuth, private router: Router) { }
 
   // tslint:disable-next-line:no-inferrable-types
   public app_name: string = '';
@@ -25,9 +26,16 @@ export class HeaderComponent implements OnInit {
     this.authService.isAuth().subscribe(auth => {
       if (auth) {
         this.isLogged = true;
+        console.log(this.isLogged);
       } else {
+        console.log(this.isLogged);
         this.isLogged = false;
       }
     });
+  }
+
+  onLogoutUser(){
+    this.authService.logoutUser();
+    this.router.navigate(['/principal']);
   }
 }
