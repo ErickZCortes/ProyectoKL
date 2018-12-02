@@ -8,17 +8,19 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  public email: string ='';
-  public password: string='';
-  constructor(private router : Router, private authService : AuthService) { }
+  // tslint:disable-next-line:no-inferrable-types
+  public email: string = '';
+  // tslint:disable-next-line:no-inferrable-types
+  public password: string = '';
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
   }
 
-  onAddUser(){
+  onAddUser() {
     this.authService.registerUser(this.email, this.password)
-    .then((res) =>{
-      this.router.navigate(['/principal']);
-    }).catch(err => console.log('err', err.message));
+      .then((res) => {
+        this.router.navigate(['/principal']);
+      }).catch(err => console.log('err', err.message));
   }
 }
