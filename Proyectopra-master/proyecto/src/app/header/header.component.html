@@ -29,7 +29,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" *ngIf="!isLogged">Contacto</a>
+          <a class="nav-link" *ngIf="!isLogged" routerLink="/contacto">Contacto</a>
         </li>
         <li class="nav-item">
           <button type="button" class="nav-link btn btn-outline-info" routerLink="/login" *ngIf="!isLogged">Login</button>
