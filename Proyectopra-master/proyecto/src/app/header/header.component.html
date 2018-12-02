@@ -35,7 +35,7 @@
           <button type="button" class="nav-link btn btn-outline-info" routerLink="/login" *ngIf="!isLogged">Login</button>
         </li>
         <li class="nav-item">
-          <button type="button" class="nav-link btn btn-outline-info" routerLink="/principal" *ngIf="isLogged" (click)="onLogoutUser()">Salir</button>
+          <button type="button" id="salir" class="nav-link btn btn-outline-info" routerLink="/principal" *ngIf="isLogged" (click)="onLogoutUser()">Salir</button>
         </li>
       </ul>
     </div>
