@@ -15,10 +15,10 @@ import { SugerenciasComponent } from './principal/sugerencias/sugerencias.compon
 
 // firebase
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 // service
 import { ItemsService } from './services/items.service';
 import { AuthService } from './services/auth.service';
@@ -42,7 +42,7 @@ import { AuthService } from './services/auth.service';
     ReactiveFormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFirestoreModule
   ],
   providers: [
     ItemsService,
