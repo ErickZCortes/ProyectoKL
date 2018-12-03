@@ -8,33 +8,32 @@
               <div class="col-md-12">
                 <div class="mx-auto p-4 col-lg-7">
                   <h1 class="mb-4">Envianos un mensaje para comentarios y sugerencias</h1>
-                  <form #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)">
+                  <form #SugerenciasForm="ngForm" autocomplete="off" (ngSubmit)="onSubmit(SugerenciasForm)">
                     <div class="row">
                       <div class="form-group col-md-12">
-                        <input type="text" #nombre="ngModel" class="form-control" name="nombre" placeholder="Nombre"
-                          [(ngModel)]="sugerenciasService.sugerencia.nombre" required>
-                        <div *ngIf="nombre.invalid && nombre.touched" class="validation-error">Campo requerido</div>
-                      </div>
-                      <div class="form-group col-md-12">
-                        <input type="email" #email="ngModel" class="form-control" id="email" name="email" placeholder="Correo electronico"
-                          [(ngModel)]="sugerenciasService.sugerencia.email" required>
-                        <div class="validation-error">Campo requerido</div>
-                      </div>
-                      <div class="form-group col-md-12">
-                        <input type="tel" #telefono="ngModel" class="form-control" id="telefono" name="telefono"
-                          required="required" [(ngModel)]="sugerenciasService.sugerencia.telefono" placeholder="Telefono"
-                          required>
-                        <div class="validation-error" *ngIf="telefono.invalid && telefono.touched">Campo requerido</div>
-                      </div>
-                      <div class="form-group col-md-12">
-                        <textarea #comentario="ngModel" class="form-control" id="comentario" rows="3" name="comentario"
-                          [(ngModel)]="sugerenciasService.sugerencia.comentario" placeholder="Agradecemos sus opiniones"
-                          required></textarea>
+                        <div class="form-group">
+                          <input class="form-control" type="text" name="nombre" id="name" #nombre="ngModel" [(ngModel)]="SugerenciasForm.name"
+                            placeholder="Nombre" required>
+                          <div class="validation-error" *ngIf="nombre.invalid && nombre.touched">Campo requerido</div>
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="email" name="email" #email="ngModel" [(ngModel)]="SugerenciasForm.email"
+                            placeholder="Correo electronico" required>
+                          <div class="validation-error" *ngIf="nombre.invalid && email.touched">Campo requerido</div>
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="tel" name="telefono" #telefono="ngModel" [(ngModel)]="SugerenciasForm.telefono"
+                            placeholder="Telefono" required>
+                          <div class="validation-error" *ngIf="telefono.invalid && telefono.touched">Campo requerido</div>
+                        </div>
+
+                        <textarea class="form-control" name="comentario" #comentario="ngModel" rows="3" [(ngModel)]="SugerenciasForm.comentario"
+                          placeholder="Agradecemos sus opiniones" required></textarea>
                         <div class="validation-error" *ngIf="comentario.invalid && comentario.touched">Campo requerido</div>
                       </div>
                     </div>
                     <div class="col-md-12 form-group">
-                      <button type="submit" class="btn btn-lg btn-success">Enviar</button>
+                      <button class="btn btn-lg btn-success btn-block" type="submit">Enviar</button>
                     </div>
                   </form>
                 </div>

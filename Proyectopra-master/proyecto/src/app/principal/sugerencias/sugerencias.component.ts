@@ -23,7 +23,7 @@ export class SugerenciasComponent implements OnInit {
         nombre: '',
         email: '',
         telefono: '',
-        comentario: ''
+        comentario: '',
       };
     }
   }
