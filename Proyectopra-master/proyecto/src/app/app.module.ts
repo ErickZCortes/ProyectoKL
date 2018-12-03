@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 // components
 import { PrincipalComponent } from './principal/principal.component';
@@ -22,6 +21,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 // service
 import { ItemsService } from './services/items.service';
 import { AuthService } from './services/auth.service';
+import { SugerenciasService } from './services/sugerencias.service';
 
 
 
@@ -47,7 +47,8 @@ import { AuthService } from './services/auth.service';
   providers: [
     ItemsService,
     AuthService,
-    AngularFireAuth
+    AngularFireAuth,
+    SugerenciasService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,26 +1,54 @@
-<div class="py-3 text-center">
+<body>
   <div class="container">
-    <div>
-      <div class="mx-auto p-4 col-lg-7">
-        <h1 class="mb-4">Envianos un mensaje para comentarios y sugerencias</h1>
-        <form (ngSubmit)="onSubmit()">
-          <div class="form-row">
-            <div class="form-group col-md-12">
-              <input type="text" class="form-control" id="name" placeholder="Nombre" [(ngModel)]="sug.name">
+    <div class="row">
+      <div class=" col-md-12 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="mx-auto p-4 col-lg-7">
+                  <h1 class="mb-4">Envianos un mensaje para comentarios y sugerencias</h1>
+                  <form #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)">
+                    <div class="row">
+                      <div class="form-group col-md-12">
+                        <input 
+                        type="text" 
+                        #nombre="ngModel" 
+                        class="form-control" 
+                        name="nombre" 
+                        placeholder="Nombre"
+                        [(ngModel)]="sugerenciasService.sugerencia.nombre" 
+                        required>
+                        <div *ngIf="nombre.invalid && nombre.touched" class="validation-error">Campo requerido</div>
+                      </div>
+                      <div class="form-group col-md-12">
+                        <input type="email" #email="ngModel" class="form-control" id="email" name="email" placeholder="Correo electronico"
+                          [(ngModel)]="sugerenciasService.sugerencia.email" required>
+                        <div class="validation-error">Campo requerido</div>
+                      </div>
+                      <div class="form-group col-md-12">
+                        <input type="tel" #telefono="ngModel" class="form-control" id="telefono" name="telefono"
+                          required="required" [(ngModel)]="sugerenciasService.sugerencia.telefono" placeholder="Telefono"
+                          required>
+                        <div class="validation-error" *ngIf="telefono.invalid && telefono.touched">Campo requerido</div>
+                      </div>
+                      <div class="form-group col-md-12">
+                        <textarea #comentario="ngModel" class="form-control" id="comentario" rows="3" name="comentario"
+                          [(ngModel)]="sugerenciasService.sugerencia.comentario" placeholder="Agradecemos sus opiniones"
+                          required></textarea>
+                        <div class="validation-error" *ngIf="comentario.invalid && comentario.touched">Campo requerido</div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 form-group">
+                      <button type="submit" class="btn btn-lg btn-success">Enviar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="form-group">
-            <input type="email" class="form-control" id="email" placeholder="Correo electronico" [(ngModel)]="sug.email" required="required">
-          </div>
-          <div class="form-group">
-            <input type="tel" class="form-control" id="cellphone" required="required" [(ngModel)]="sug.number"placeholder="Telefono">
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" id="form30" rows="3" [(ngModel)]="sug.opinion" placeholder="Agradecemos sus opiniones"></textarea>
-          </div>
-          <button type="submit" class="btn btn-lg btn-success">Enviar</button>
-        </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</body>
