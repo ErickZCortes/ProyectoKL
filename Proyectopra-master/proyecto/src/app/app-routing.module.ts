@@ -5,6 +5,7 @@ import { AgregarComponent } from './agregar/agregar.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './guards/auth.guard';
+import { SugerenciasComponent } from './principal/sugerencias/sugerencias.component';
 
 const routes: Routes = [
     {

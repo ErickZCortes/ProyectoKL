@@ -2,6 +2,9 @@
 input.ng-touched.ng-invalid{
     border-color: #dc3545;
 }
+textarea.ng-touched.ng-invalid{
+    border-color: #dc3545;
+}
 
 div.validation-error{
     width : 100%;
@@ -10,9 +13,11 @@ div.validation-error{
     color: #dc3545;
 }
 
+
 table.table-hover tbody td:hover{
     cursor: pointer;
 }
 tbody:hover{
     background-color: #58ACFA;
 }
+

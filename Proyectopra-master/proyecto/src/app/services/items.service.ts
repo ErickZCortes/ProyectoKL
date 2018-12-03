@@ -11,7 +11,7 @@ export class ItemsService {
     item: Item;
     constructor(private firestore: AngularFirestore) { }
 
-    getItems(){
+    getItems() {
         return this.firestore.collection('Items').snapshotChanges();
 
     }
