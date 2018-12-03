@@ -3,20 +3,20 @@
     <div>
       <div class="mx-auto p-4 col-lg-7">
         <h1 class="mb-4">Envianos un mensaje para comentarios y sugerencias</h1>
-        <form>
+        <form (ngSubmit)="onSubmit()">
           <div class="form-row">
             <div class="form-group col-md-12">
-              <input type="text" class="form-control" id="name" placeholder="Nombre" value="">
+              <input type="text" class="form-control" id="name" placeholder="Nombre" [(ngModel)]="sug.name">
             </div>
           </div>
           <div class="form-group">
-            <input type="email" class="form-control" id="email" placeholder="Correo electronico" required="required">
+            <input type="email" class="form-control" id="email" placeholder="Correo electronico" [(ngModel)]="sug.email" required="required">
           </div>
           <div class="form-group">
-            <input type="number" class="form-control" id="cellphone" required="required" placeholder="Telefono">
+            <input type="tel" class="form-control" id="cellphone" required="required" [(ngModel)]="sug.number"placeholder="Telefono">
           </div>
           <div class="form-group">
-            <textarea class="form-control" id="form30" rows="3" placeholder="Agradecemos sus opiniones"></textarea>
+            <textarea class="form-control" id="form30" rows="3" [(ngModel)]="sug.opinion" placeholder="Agradecemos sus opiniones"></textarea>
           </div>
           <button type="submit" class="btn btn-lg btn-success">Enviar</button>
         </form>
