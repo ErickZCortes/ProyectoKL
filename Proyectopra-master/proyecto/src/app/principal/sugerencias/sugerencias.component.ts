@@ -9,7 +9,6 @@ import { AngularFirestore } from '@angular/fire/firestore';
   styleUrls: ['./sugerencias.component.css']
 })
 export class SugerenciasComponent implements OnInit {
-
   constructor(private sugerenciasService: SugerenciasService, private firestore: AngularFirestore ) { }
 
   ngOnInit() {

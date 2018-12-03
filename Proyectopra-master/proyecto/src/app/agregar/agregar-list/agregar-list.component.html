@@ -1,0 +1,9 @@
+<table class="table table-hover">
+  <thead>
+    <th>Kilos</th>
+  </thead>
+  <tbody *ngFor = "let emp of list">
+    <td (click)="onEdit(emp)">{{emp.quantity}}</td>
+    <td><a class="btn text-danger" (click)="onDelete(emp.iditem)"><i class="fa fa-trash"></i></a></td>
+  </tbody>
+</table>

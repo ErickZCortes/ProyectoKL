@@ -10,13 +10,13 @@
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#" *ngIf="!isLogged">Inicio</a>
+          <a class="nav-link" routerLink="/principal" *ngIf="!isLogged">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/agregar"*ngIf="isLogged">Agregar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"*ngIf="!isLogged">Servicios</a>
+          <a class="nav-link" href="#" *ngIf="!isLogged">Servicios</a>
         </li>
         <li class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" *ngIf="isLogged">
@@ -35,7 +35,7 @@
           <button type="button" class="nav-link btn btn-outline-info" routerLink="/login" *ngIf="!isLogged">Login</button>
         </li>
         <li class="nav-item">
-          <button type="button" class="nav-link btn btn-outline-info" routerLink="/principal" *ngIf="isLogged" (click)="onLogoutUser()">Salir</button>
+          <button type="button" id="salir" class="nav-link btn btn-outline-info" routerLink="/principal" *ngIf="isLogged" (click)="onLogoutUser()">Salir</button>
         </li>
       </ul>
     </div>

@@ -8,7 +8,6 @@ import { AgregarComponent } from './agregar/agregar.component';
 // route
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
-import { SecondComponent } from './second/second.component';
 import { RegisterComponent } from './register/register.component';
 import { SugerenciasComponent } from './principal/sugerencias/sugerencias.component';
 
@@ -24,6 +23,10 @@ import { AuthService } from './services/auth.service';
 import { SugerenciasService } from './services/sugerencias.service';
 
 
+import { AgregarListComponent } from './agregar/agregar-list/agregar-list.component';
+import { AgregarActionsComponent } from './agregar/agregar-actions/agregar-actions.component';
+// animatios
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,9 +35,10 @@ import { SugerenciasService } from './services/sugerencias.service';
     HeaderComponent,
     AgregarComponent,
     LoginComponent,
-    SecondComponent,
     RegisterComponent,
-    SugerenciasComponent
+    SugerenciasComponent,
+    AgregarListComponent,
+    AgregarActionsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,8 @@ import { SugerenciasService } from './services/sugerencias.service';
     ReactiveFormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     ItemsService,

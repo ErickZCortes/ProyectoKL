@@ -1,35 +1,18 @@
 import { Subject } from 'rxjs';
-import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { Item } from '../shared/item.model';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { AngularFirestore } from '@angular/fire/firestore';
+
 
 @Injectable()
 
 export class ItemsService {
-    itemsChanged = new Subject<Item[]>();
-    itemList: AngularFireList<any>;
-    selectedItem: Item = new Item();
+    item: Item;
+    constructor(private firestore: AngularFirestore) { }
 
-    constructor(private firebase: AngularFireDatabase) { }
-
-    getItems() {
-        this.itemList = this.firebase.list('items');
-    }
-
-    addItemsToList(item: Item) {
-        this.itemList.push({
-            quantity: item.quantity
-        });
-    }
-
-    updateItem(item: Item) {
-        this.itemList.update(item.iditem, {
-            quantity: item.quantity
-        });
-    }
-
-    deleteItem(iditem: string) {
-        this.itemList.remove(iditem);
+    getItems(){
+        return this.firestore.collection('Items').snapshotChanges();
 
     }
-}
+    }

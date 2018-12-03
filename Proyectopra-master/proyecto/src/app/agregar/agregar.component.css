@@ -1,9 +1,3 @@
 body{
-    background: #f6fbfd;
-}
-#bot{
-    border: solid 1px red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-image: linear-gradient(to right, #009DC6 , #00245A);
 }
