@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SugerenciasComponent implements OnInit {
 
-  constructor(private sugerencia) { }
+  constructor() { }
 
   ngOnInit() {
   }

@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { PrincipalComponent } from './principal/principal.component';
 import { AgregarComponent } from './agregar/agregar.component';
 import { LoginComponent } from './login/login.component';
-import { SecondComponent } from './second/second.component';
 import { RegisterComponent } from './register/register.component';
 import { SugerenciasComponent } from './principal/sugerencias/sugerencias.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
     {
@@ -15,10 +15,7 @@ const routes: Routes = [
         path: 'principal', component: PrincipalComponent
     },
     {
-        path: 'agregar', component: AgregarComponent
-    },
-    {
-        path: 'second', component: SecondComponent
+        path: 'agregar', component: AgregarComponent, canActivate:[AuthGuard]
     },
     {
         path: 'login', component: LoginComponent
