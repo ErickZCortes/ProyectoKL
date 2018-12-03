@@ -1,6 +1,6 @@
 export class Sugerencia {
     idsug: String;
-    nombre: String;
+    nombresug: String;
     email: String;
     telefono: String;
     comentario: String;

@@ -5,7 +5,12 @@
             <label for="item">Kilos:</label>
         </div>
         <div class="col-md-4 form-group">
-            <input type="number" name="quantity" class="form-control" #quantity="ngModel" [(ngModel)]="itemService.item.quantity"
+            <input 
+            type="number" 
+            name="quantity" 
+            class="form-control" 
+            #quantity="ngModel" 
+            [(ngModel)]="itemService.item.quantity"
                 ngModel pattern="^[0-9]*$" required>
             <div class="validation-error" *ngIf="quantity.invalid && quantity.touched"> Este campo es requerido.</div>
         </div>

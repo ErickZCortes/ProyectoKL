@@ -9,7 +9,6 @@ import { AgregarComponent } from './agregar/agregar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { SugerenciasComponent } from './principal/sugerencias/sugerencias.component';
 
 // firebase
 import { AngularFireModule } from '@angular/fire';
@@ -36,7 +35,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AgregarComponent,
     LoginComponent,
     RegisterComponent,
-    SugerenciasComponent,
     AgregarListComponent,
     AgregarActionsComponent
   ],
