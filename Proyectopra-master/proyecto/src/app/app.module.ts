@@ -26,6 +26,7 @@ import { AgregarListComponent } from './agregar/agregar-list/agregar-list.compon
 import { AgregarActionsComponent } from './agregar/agregar-actions/agregar-actions.component';
 // animatios
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SugerenciasComponent } from './principal/sugerencias/sugerencias.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     RegisterComponent,
     AgregarListComponent,
-    AgregarActionsComponent
+    AgregarActionsComponent,
+    SugerenciasComponent
   ],
   imports: [
     BrowserModule,
