@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SugerenciasService } from 'src/app/services/sugerencias.service';
-import { NgForm } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-sugerencias',
@@ -9,12 +9,12 @@ import { AngularFirestore } from '@angular/fire/firestore';
   styleUrls: ['./sugerencias.component.css']
 })
 export class SugerenciasComponent implements OnInit {
-  constructor(private sugerenciasService: SugerenciasService, private firestore: AngularFirestore ) { }
+
+  constructor(private sugerenciasService: SugerenciasService, private firestore: AngularFirestore) { }
 
   ngOnInit() {
     this.resetForm();
   }
-
   resetForm(form?: NgForm) {
     if (form != null) {
       form.resetForm();
