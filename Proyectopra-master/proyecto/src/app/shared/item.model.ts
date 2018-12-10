@@ -1,6 +1,3 @@
 export class Item {
-
-      iditem: string;
-      idUser: string;
-      quantity: number;
+      constructor(public product: string, public quantity: number){}
 }

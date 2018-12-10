@@ -1,22 +1,20 @@
-<form #itemForm="ngForm" autocomplete="off" (ngSubmit)="onSubmit(itemForm)">
-    <input class="form-control" type="hidden" name="iditem" #iditem="ngModel" [(ngModel)]="itemService.item.iditem">
+<form #itemForm="ngForm" autocomplete="off" (ngSubmit)="onAddItem(itemForm)">
     <div class="row">
+        <div class="col-md-12">
+                    <label for="item">Producto:</label>
+                </div>
+                <div class="col-md-4 form-group">
+                    <input type="text" id="product" class="form-control" name="product" ngModel pattern="^[A-Za-z]+$" required>
+                </div>
         <div class="col-md-12">
             <label for="item">Kilos:</label>
         </div>
         <div class="col-md-4 form-group">
-            <input 
-            type="number" 
-            name="quantity" 
-            class="form-control" 
-            #quantity="ngModel" 
-            [(ngModel)]="itemService.item.quantity"
-                ngModel pattern="^[0-9]*$" required>
-            <div class="validation-error" *ngIf="quantity.invalid && quantity.touched"> Este campo es requerido.</div>
+            <input type="number" id="quantity" class="form-control" name="quantity" ngModel="quantity" pattern="^[0-9]*$" required>
         </div>
         <div class="col-md-4 form-group">
-            <button id="buttons" class="btn btn-success" type="submit"> Agregar</button>
-            <button id="buttons" class="btn btn-primary" type="submit"> Editar</button>
+            <button id="buttons" class="btn btn-success" type="submit">Agregar</button>
+            <button id="buttons" class="btn btn-danger" type="submit"(click)="onDelete()" *ngIf="editMode"> Eliminar</button>
             <button id="buttons" class="btn btn-secondary" type="submit"> Limpiar</button>
         </div>
         <div class="col-md-4 form-group">

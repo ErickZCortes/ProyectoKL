@@ -14,10 +14,4 @@ div.validation-error{
 }
 
 
-table.table-hover tbody td:hover{
-    cursor: pointer;
-}
-tbody:hover{
-    background-color: #58ACFA;
-}
 

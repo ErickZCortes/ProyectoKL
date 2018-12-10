@@ -26,10 +26,10 @@ export class HeaderComponent implements OnInit {
     this.authService.isAuth().subscribe(auth => {
       if (auth) {
         this.isLogged = true;
-        console.log(this.isLogged);
-        console.log(this.authService.getIdUSer());
-      } else {
-        console.log(this.isLogged);
+        //console.log(this.isLogged);
+        //console.log(this.authService.getIdUSer());
+      } else if(!auth){
+        //console.log(this.isLogged);
         this.isLogged = false;
       }
     });
