@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './guards/auth.guard';
 import { SugerenciasComponent } from './principal/sugerencias/sugerencias.component';
+import { AgregarFinishComponent } from './agregar/agregar-finish/agregar-finish.component';
 
 const routes: Routes = [
     {
@@ -15,7 +16,9 @@ const routes: Routes = [
         path: 'principal', component: PrincipalComponent
     },
     {
-        path: 'agregar', component: AgregarComponent, canActivate:[AuthGuard]
+        path: 'agregar', component: AgregarComponent, canActivate:[AuthGuard], children:[
+            {path:'resultado', component:AgregarFinishComponent}
+        ]
     },
     {
         path: 'login', component: LoginComponent

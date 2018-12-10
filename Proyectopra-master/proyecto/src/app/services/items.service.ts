@@ -10,10 +10,11 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class ItemsService {
     itemChanged = new Subject<Item[]>();
     startedEditing = new Subject<number>();
+    item: Item;
     constructor(private firestore: AngularFirestore) {
     }
     private items: Item[] = [
-        new Item(null, null)
+        new Item(null)
     ]
 
     addItem(item: Item) {

@@ -27,6 +27,8 @@ import { AgregarActionsComponent } from './agregar/agregar-actions/agregar-actio
 // animatios
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SugerenciasComponent } from './principal/sugerencias/sugerencias.component';
+import { AgregarFinishComponent } from './agregar/agregar-finish/agregar-finish.component';
+import { RegistrosService } from './services/registros.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { SugerenciasComponent } from './principal/sugerencias/sugerencias.compon
     RegisterComponent,
     AgregarListComponent,
     AgregarActionsComponent,
-    SugerenciasComponent
+    SugerenciasComponent,
+    AgregarFinishComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,8 @@ import { SugerenciasComponent } from './principal/sugerencias/sugerencias.compon
     ItemsService,
     AuthService,
     AngularFireAuth,
-    SugerenciasService
+    SugerenciasService,
+    RegistrosService
   ],
   bootstrap: [AppComponent]
 })

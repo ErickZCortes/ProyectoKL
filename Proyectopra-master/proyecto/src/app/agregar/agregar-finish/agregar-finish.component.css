@@ -1,0 +1,14 @@
+#top{
+    padding-top: 40px;
+    text-align: center;
+}
+.col-md-12{
+    text-align: center;
+}
+.row{
+    margin-top: 25px;
+    border: solid 3px teal;
+}
+#bottom{
+    padding-bottom: 40px;
+}

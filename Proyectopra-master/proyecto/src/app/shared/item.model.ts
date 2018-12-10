@@ -1,3 +1,3 @@
 export class Item {
-      constructor(public product: string, public quantity: number){}
+      constructor(public quantity: number){}
 }
