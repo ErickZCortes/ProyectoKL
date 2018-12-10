@@ -36,7 +36,7 @@ export class AuthService {
         // tslint:disable-next-line:no-shadowed-variable
         return this.afAuth.authState.pipe(map(auth => auth));
     }
-    getIdUSer(){
+    getIdUSer() {
         const user =  this.afAuth.auth.currentUser;
         if (user) {
             return user;
