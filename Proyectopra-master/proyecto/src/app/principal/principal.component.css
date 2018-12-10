@@ -104,7 +104,7 @@ img {
     text-align: center;
 }
 .container-fluid.footer {
-    background-color: #2f2f2f;
+    background-color: #151515;
     color: #fff;
 }
 .container-fluid {
@@ -142,4 +142,32 @@ h1 {
 }
 .text-center {
     text-align: center !important;
+}
+
+hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 157, 198, 0.75);
+}
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+.bg-light {
+    background-color: #f3f3f3 !important;
+}
+
+#info {
+    background: linear-gradient(to bottom right, rgba(18, 187, 173, 0.9) 0%, rgba(79, 112, 206, 0.9) 100%);
+}
+#text {
+    color: black;
+    font-family: sans-serif;
+    font-size: medium;
+}
+#section1 {
+    background:black;
+    color: white;
 }
