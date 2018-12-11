@@ -50,7 +50,7 @@ export class AgregarActionsComponent implements OnInit {
     this.producto = value.product;
     console.log( this.result= this.result + value.quantity);
     const newItem = new Item(value.quantity);
-      this.itemService.addItem(newItem);
+    const aditem =this.itemService.addItem(newItem);
     this.editMode = false;
     this.clear();
   }
@@ -62,9 +62,10 @@ export class AgregarActionsComponent implements OnInit {
   }
   onFinish(){
     const resulting= new Registro(this.producto, this.result);
-    this.registroService.addRegistro(resulting);
-    console.log(resulting); 
-    //this.ruoter.navigate(['resultado'], {relativeTo: this.route});
+     this.registroService.addRegistro(resulting);
+    console.log(this.registroService.getRegistros());
+    //console.log(resulting); 
+    this.ruoter.navigate(['resultado'], {relativeTo: this.route});
   }
   clear() {
     this.slForm.reset(); 

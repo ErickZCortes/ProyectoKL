@@ -15,8 +15,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class AgregarListComponent implements OnInit {
   private subscription: Subscription;
   items: Item[];
-  registro: Registro[];
-  constructor(private registroService : RegistrosService, private itemsService: ItemsService, private firestore: AngularFirestore,private route: ActivatedRoute,private router: Router) { }
+  constructor( private itemsService: ItemsService, private firestore: AngularFirestore,private route: ActivatedRoute,private router: Router) { }
   id : number;
   ngOnInit() {
     this.items = this.itemsService.getItems();
@@ -25,7 +24,8 @@ export class AgregarListComponent implements OnInit {
         this.items = items;
       })
     );
-    this.registro = this.registroService.getRegistros();
+    //const registro = this.registros = this.registroService.getRegistros();
+    //console.log(registro);
   }
   ngOnDestroy(){
     this.subscription.unsubscribe();

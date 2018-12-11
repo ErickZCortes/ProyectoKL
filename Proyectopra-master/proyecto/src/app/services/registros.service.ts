@@ -14,9 +14,7 @@ export class RegistrosService {
     registroChanged = new Subject<Registro[]>();
 
     constructor(){}
-    private registros: Registro[] = [
-        new Registro(null,null)
-    ]
+    private registros: Registro[] = []
 
     addRegistro(registro: Registro) {
         this.registros.push(registro);
