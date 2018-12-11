@@ -26,7 +26,7 @@ export class AgregarActionsComponent implements OnInit {
   itemForm : FormGroup;
   registro:Registro[];
   public producto : string = '';
-  constructor(private registroService: RegistrosService, private itemService : ItemsService, private ruoter: Router, private route: ActivatedRoute) { }
+  constructor(private registroService: RegistrosService, private itemService : ItemsService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.subscription = this.itemService.startedEditing.subscribe((index: number) => {
@@ -65,7 +65,7 @@ export class AgregarActionsComponent implements OnInit {
      this.registroService.addRegistro(resulting);
     console.log(this.registroService.getRegistros());
     //console.log(resulting); 
-    this.ruoter.navigate(['resultado'], {relativeTo: this.route});
+    this.router.navigate(['resultado'], {relativeTo: this.route});
   }
   clear() {
     this.slForm.reset(); 

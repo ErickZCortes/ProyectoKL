@@ -12,6 +12,8 @@ div.validation-error{
     font-size: 80%;
     color: #dc3545;
 }
-
+#grad {
+    background-image: linear-gradient(to right, #009DC6 , #00245A);
+}
 
 
